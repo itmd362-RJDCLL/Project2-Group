@@ -204,14 +204,17 @@ li {
   list-style-position: inside;
   list-style-type: none;
   padding: 0.60em;
+  padding-left: 0;
   padding-bottom: 0.60em; /* 10.25px, half of the gridline */
 }
 
+/*
 li:last-child {
-  padding: 1.22em;/* 16.5px; */
+  padding: 1.22em;/* 16.5px;
   padding-bottom: 0;
   
 }
+*/
 
 #navigation{
   position: static; 
