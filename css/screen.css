@@ -220,6 +220,7 @@ li:last-child {
   position: static; 
   padding-top:5em;
   display: block;
+  width: 100%;
   
 } 
 /*
