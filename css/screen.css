@@ -188,18 +188,31 @@ textarea {
 #navigation{
   position: static; 
   padding-top:5em;
+  display: block;
+  
 } 
-
+/*
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    color: #888;
+    display: block;
+    margin: 8px 22px 8px 22px;
+    overflow: hidden;
+    width: 90%; 
+*/
 .navigation li,
 .navigation li:last-child{
   display: inline-block;
   padding: 0;
-  width: 25%;
+  width: 16%;
   border-bottom: 0.02em solid #fff;
+  border-right: 0.02em solid #fff;
 }
 
 .navigation {
-  line-height:0.2em;;
+  line-height:0.2em;
   padding: 0;
 }
 .navigation li a {
@@ -210,6 +223,8 @@ textarea {
   text-decoration: none;
   padding-bottom: 1.20em;
   padding: 1.29em;
+  text-align: center;
+  margin-right: -5px;
 }
 
 header {
