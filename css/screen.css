@@ -11,7 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
  
 /* minor third scale */
 
-/* http://www.modularscale.com/?18&px&1.2&web&text */
+/* http://www.modularscale.com/?17&px&1.125 */
 /* Forms
    ========================================================================== */
 
@@ -182,8 +182,22 @@ textarea {
 
 /* end normalize.css form styles */
 
-
+/* 8:9 Major 2nd scale */
 /* ===== BASE STYLES ===== */
+html{
+  font-size: 1.063em; /*17px*/
+  line-height:1.20em; /*20.5px  120%*/
+  color: #000;
+  background: #f5f5f5;
+  
+}
+
+h2{
+  font-size: 1.26em; /*21.516px*/
+  line-height: 1.20em; /*25.819px*/
+  background: #ff0000;
+  border-bottom: 0.02em solid #fff;
+}
 
 #navigation{
   position: static; 
