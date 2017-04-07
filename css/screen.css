@@ -265,9 +265,11 @@ li:last-child {
 }
 
 #events,
-#numbers{
+#numbers,
+#registration,
+#ugrad,
+#grad{
   border: solid #696969;
-
 }
 
 #iit{
