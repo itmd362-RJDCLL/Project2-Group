@@ -218,7 +218,14 @@ li {
   width: 100%;
   font-size: 1.26em; /*21.516px*/
   line-height: 1.20em; /*25.819px*/
+  text-align: center;
+  line-height: 2.4em;
 }
+
+#bottom-bar {
+  bottom: 0;
+}
+
 
 /*
 li:last-child {
@@ -227,27 +234,26 @@ li:last-child {
   
 }
 */
-#navigation{
+#navigation {
   position: static; 
   top:0;
+  padding-top: 3.6em; /*3 * line height 1.2 */
 } 
 
 .navigation li,
 .navigation li:last-child{
   display: inline-block;
   padding: 0;
-  width: 100%;
   border-bottom: 0.02em solid #fff;
 }
 
 .navigation {
   line-height:0.2em;
-  padding: 0;
   position:static;
   background-color: #ff0000;
   color: #000;
 }
-
+
 .navigation li a {
   display:inline-block;
   padding: 1.20em;
@@ -255,6 +261,7 @@ li:last-child {
   padding-bottom: 1.20em;
   padding: 1.29em;
   margin-right: -5px;
+  color: #000;
 }
 
 /*
