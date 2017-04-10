@@ -279,6 +279,7 @@ nav a:hover {
 #page {
   transition: margin-left 1s;
 }
+
 #top-bar,
 #bottom-bar{
   position: fixed;
@@ -341,6 +342,10 @@ li:last-child {
 
 #list-classes{
   display:none;
+}
+
+.itmd-selected #itmd-classes{
+  display: list-item;
 }
 
 
