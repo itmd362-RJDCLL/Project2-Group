@@ -58,20 +58,6 @@ jQuery(function($) {
   });
   */
 
-});
-  $('#menuToggle').on('click', function(e) {
-    // Don't follow the #tools-jump link:
-    e.preventDefault();
-    // prevent event bubbling; without this
-    // line, inner click event, on #content,
-    // will fire immediately:
-    e.stopPropagation();
-    $('html').toggleClass('has-toolbar');
-    $('#page').on('click', function(e) {
-      $('html').removeClass('has-toolbar');
-    });
-  });
-  
     $('html').toggleClass('itmd-selected');
     var ele = document.getElementById('classes');
     var selectedValue = ele.options[ele.selectedIndex].value;
