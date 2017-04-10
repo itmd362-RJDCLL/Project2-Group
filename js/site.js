@@ -16,5 +16,9 @@ jQuery(function($) {
       $('html').removeClass('has-toolbar');
     });
   });
-
+  
+  $('#class-form-submit').on('submit', function() {
+      $('#information').apend('visible');
+  
+      }) 
 });
