@@ -4,7 +4,7 @@ $.noConflict();
 jQuery(function($) {
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
-  $('##menuToggle').on('click', function(e) {
+  $('#menuToggle').on('click', function(e) {
     // Don't follow the #tools-jump link:
     e.preventDefault();
     // prevent event bubbling; without this
@@ -17,8 +17,11 @@ jQuery(function($) {
     });
   });
   
-  $('#class-form-submit').on('submit', function() {
-      $('#information').apend('visible');
-  
-      }) 
-});
+    $('html').toggleClass('itmd-selected');
+    var ele = document.getElementById('classes');
+    var selectedValue = ele.options[ele.selectedIndex].value;
+    if(selectedValue=='itmd'){
+      $('#list-classes').apend('visible');
+      $('html').addClass('itmd-selected');
+      }      
+}); 
