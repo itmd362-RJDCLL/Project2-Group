@@ -4,7 +4,7 @@ $.noConflict();
 jQuery(function($) {
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
-  
+    
   
   $(document).ready(
   function() {
@@ -58,4 +58,11 @@ jQuery(function($) {
   });
   */
 
-});
+    $('html').toggleClass('itmd-selected');
+    var ele = document.getElementById('classes');
+    var selectedValue = ele.options[ele.selectedIndex].value;
+    if(selectedValue=='itmd'){
+      $('#list-classes').apend('visible');
+      $('html').addClass('itmd-selected');
+      }      
+}); 
