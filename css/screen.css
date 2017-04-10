@@ -339,6 +339,10 @@ li:last-child {
   padding-bottom: 1.20em;
 }
 
+#list-classes{
+  display:none;
+}
+
 
 /*
 header {
