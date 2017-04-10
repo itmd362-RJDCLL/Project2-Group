@@ -43,8 +43,8 @@ jQuery(function($) {
       
     });  
   })
-  /*
-  $('##menuToggle').on('click', function(e) {
+  
+  $('#menuToggle').on('click', function(e) {
     // Don't follow the #tools-jump link:
     e.preventDefault();
     // prevent event bubbling; without this
@@ -56,7 +56,7 @@ jQuery(function($) {
       $('html').removeClass('has-toolbar');
     });
   });
-  */
+  
 
     $('html').toggleClass('itmd-selected');
     var ele = document.getElementById('classes');
