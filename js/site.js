@@ -4,6 +4,46 @@ $.noConflict();
 jQuery(function($) {
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
+  
+  
+  $(document).ready(
+  function() {
+    //empty fields
+    $('#user').val('');
+    $('pswd').val('');
+    $('input#log').removeClass('hide')
+    
+    $('#submit').on('submit', function(e) {
+      //captures fields and turns to variables
+      var user = $('#user').val();
+      var pswd = $('#pswd').val();
+      
+      if (user === '') {
+        alert('This field cannot be left blank!');
+        return false;
+      }
+      if (pswd === '') {
+        alert('This field cannot be left blank!');
+        return false;
+      }
+      
+      if(user !== 'user') {
+        alert('You have entered the incorrect credentials!');
+        return false;
+      }
+      if(pswd !== 'password') {
+        alert('You have entered the incorrect credentials!');
+        return false;
+      }
+      
+      $('#login').append('Thank you for signing in! You are being redirected.');
+      $('input#log').addClass('hide');
+      
+      e.preventDefault();
+      
+    });  
+  })
+  /*
   $('##menuToggle').on('click', function(e) {
     // Don't follow the #tools-jump link:
     e.preventDefault();
@@ -16,5 +56,6 @@ jQuery(function($) {
       $('html').removeClass('has-toolbar');
     });
   });
+  */
 
 });
