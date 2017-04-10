@@ -279,7 +279,9 @@ nav a:hover {
 #page {
   transition: margin-left 1s;
 }
-
+#login {
+  padding-top: 3.15em; /*53.79px*/
+}
 #top-bar,
 #bottom-bar{
   position: fixed;
