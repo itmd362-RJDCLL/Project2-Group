@@ -230,7 +230,7 @@ nav a:hover {
   position:static;
   background-color: #ff0000;
   color: #000;
-/*	height: 100%; should it stretch the length of the page? */
+	height: 100%; /*should it stretch the length of the page? */
 	background: #ff0000;
   position: absolute;
 }
@@ -241,6 +241,7 @@ nav a:hover {
   opacity: 0;
   position: absolute;
   left: -50%; 
+  margin-left: 0.75em;
 }
 
 
@@ -399,11 +400,23 @@ header {
 
 .navigation {
   line-height:0.2em;
-  position:static;
+  position:fixed;
   background-color: #ff0000;
   color: #000;
-  height: 100%; /* should it stretch the length of the page? */
+  height: 2.4em; 
 	background: #ff0000;
-  position: absolute;
+  border-top: 0.02em solid #fff;
   }
+  
+  .hasjs .navigation {
+  transition: none; /* No transition on load or tool close */
+  opacity: 1;
+  width: 100%;
+  left:0; 
+}
+
+.menu-icon {
+  display: none; 
+}
+
 }
