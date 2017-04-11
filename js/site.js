@@ -6,6 +6,17 @@ jQuery(function($) {
   $('html').addClass('hasjs');
     
   
+   $('#class-form').on('submit', function(e) {
+    $('html').toggleClass('itmd-selected');
+    $('#class-form').append('hello');
+    var ele = document.getElementById('#classes');
+    var selectedValue = ele.options[ele.selectedIndex].value;
+    if(selectedValue=='itmd'){
+      $('#list-classes').apend('visible');
+      $('html').toggleClass('itmd-selected');
+      }   
+    });
+    
   $(document).ready(
   function() {
     //empty fields
@@ -58,11 +69,4 @@ jQuery(function($) {
   });
   
 
-    $('html').toggleClass('itmd-selected');
-    var ele = document.getElementById('#classes');
-    var selectedValue = ele.options[ele.selectedIndex].value;
-    if(selectedValue=='itmd'){
-      $('#list-classes').apend('visible');
-      $('html').addClass('itmd-selected');
-      }      
 }); 

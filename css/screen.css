@@ -212,11 +212,12 @@ li {
 
 .menu-icon {
 	padding: 10px 20px;
-	background: #000;
 	cursor: pointer;
 	float: right;
-	margin: 6px 6px 0 0;
-	border-radius: 10px;
+	/*margin: 6px 6px 0 0; */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+
 }
 
 nav a:hover { 
@@ -229,21 +230,20 @@ nav a:hover {
   position:static;
   background-color: #ff0000;
   color: #000;
-/*	height: 100%; should it stretch the length of the page? */
+	height: 100%; /*should it stretch the length of the page? */
 	background: #ff0000;
   position: absolute;
 }
 
-/*
+
 .hasjs .navigation {
-  transition: none; /* No transition on load or tool close 
+  transition: none; /* No transition on load or tool close */
   opacity: 0;
   position: absolute;
-  top: 120px;
-  /*left: -50%;
-  left: 5%;
+  left: -50%; 
+  margin-left: 0.75em;
 }
-8?
+
 
 /*
 #menuToggle {
@@ -252,12 +252,16 @@ nav a:hover {
 */
 
 .has-toolbar .navigation {
-  transition: opacity 1s 1s;
   opacity: 1;
+  padding-left: 1.2em;
+  margin-left: 50%;
+  transition: margin-left 1s;
+  width: 45%;
 }
 
+/*
 #menuToggle:checked ~ .navigation { 
-  transition: opacity 1s 1s;
+
   opacity: 1;
   
   transition: all .3s ease-in-out;
@@ -267,12 +271,13 @@ nav a:hover {
 	-o-transition: all .3s ease-in-out;
 	
 }
+*/
 
-#menuToggle:checked~ #page{
+.has-toolbar #page{
   margin-left: 50%;
   transition: margin-left 1s;
 }
-#menuToggle:checked~ body{
+.has-toolbar body{
   overflow-x: hidden;
 }
 
@@ -341,11 +346,11 @@ li:last-child {
 #iit{
   padding-bottom: 1.20em;
 }
-
+/*
 #list-classes{
   display:none;
 }
-
+*/
 .itmd-selected #itmd-classes{
   display: list-item;
 }
@@ -395,11 +400,23 @@ header {
 
 .navigation {
   line-height:0.2em;
-  position:static;
+  position:fixed;
   background-color: #ff0000;
   color: #000;
-/*	height: 100%; should it stretch the length of the page? */
+  height: 2.4em; 
 	background: #ff0000;
-  position: absolute;
+  border-top: 0.02em solid #fff;
   }
+  
+  .hasjs .navigation {
+  transition: none; /* No transition on load or tool close */
+  opacity: 1;
+  width: 100%;
+  left:0; 
+}
+
+.menu-icon {
+  display: none; 
+}
+
 }
