@@ -245,11 +245,11 @@ nav a:hover {
 }
 
 
-/*
+
 #menuToggle {
   display: none; 
 }
-*/
+
 
 .has-toolbar .navigation {
   opacity: 1;
@@ -347,11 +347,11 @@ li:last-child {
 #iit {
   padding-bottom: 1.20em;
 }
-/*
+
 #list-classes{
   display:none;
 }
-*/
+
 .itmd-selected #itmd-classes {
   display: list-item;
 }
