@@ -344,6 +344,17 @@ li:last-child {
   text-align: center;  
 }
 
+
+.inactiveLink #events,
+.inactiveLink #numbers,
+.inactiveLink #registration,
+.inactiveLink #ugrad,
+.inactiveLink #grad {
+  pointer-events: auto;
+}
+
+
+
 #events,
 #numbers,
 #registration,
@@ -423,6 +434,10 @@ header {
 
   .menu-icon {
     display: none; 
+  }
+  
+  .inactiveLink #inactiveLink{
+  pointer-events: auto;
   }
 
 }
