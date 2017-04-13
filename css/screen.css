@@ -238,9 +238,9 @@ nav a:hover {
   position: absolute;
 }
 
+
 .inactiveLink #inactiveLink{
   pointer-events: none;
-   cursor: default;
 }
 .hasjs .navigation{
  /* No transition on load or tool close */
@@ -344,6 +344,17 @@ li:last-child {
   text-align: center;  
 }
 
+
+.inactiveLink #events,
+.inactiveLink #numbers,
+.inactiveLink #registration,
+.inactiveLink #ugrad,
+.inactiveLink #grad {
+  pointer-events: auto;
+}
+
+
+
 #events,
 #numbers,
 #registration,
@@ -423,6 +434,10 @@ header {
 
   .menu-icon {
     display: none; 
+  }
+  
+  .inactiveLink #inactiveLink{
+  pointer-events: auto;
   }
 
 }
