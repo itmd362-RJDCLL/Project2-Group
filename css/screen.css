@@ -238,9 +238,9 @@ nav a:hover {
   position: absolute;
 }
 
+
 .inactiveLink #inactiveLink{
   pointer-events: none;
-   cursor: default;
 }
 .hasjs .navigation{
  /* No transition on load or tool close */
