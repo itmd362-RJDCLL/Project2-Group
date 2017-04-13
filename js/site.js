@@ -2,6 +2,8 @@ $.noConflict();
 
 // jQuery 3.x-style ready event and locally scoped $
 jQuery(function($) {
+  
+  
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
     
@@ -17,6 +19,34 @@ jQuery(function($) {
       }   
     });
     
+    function toggleLabel(oldLabel, newLabel, label) {
+      if(oldLabel === label) {
+        return newLabel;
+      }
+      else {
+        return oldLabel;
+      }
+           
+    }    
+    $('#pswd-input').append('<a href="#null" id="show-toggle">Show Password</a>');
+    $('#show-toggle').on('click', function(e){
+      $('#pswd').attr('type', toggleLabel('password', 'text', $('#pswd').attr('type')));
+      $('#show-toggle').html(toggleLabel('Show Password', 'Hide Password', $('#show-toggle').html()));
+    });
+    
+    $('#login').on('submit', function(e) {
+      if ($('#user').val() === 'user' && $('#pswd').val() === 'password') {
+        window.location.replace('welcome\\index.html');
+      }
+      else {
+        console.log('Incorrect username or password');
+        $('#login').prepend('<div class="error">Incorrect username or password</div>');
+      }
+      
+      e.preventDefault();
+    });
+    
+  /*  
   $(document).ready(
   function() {
     //empty fields
@@ -29,11 +59,7 @@ jQuery(function($) {
       var user = $('#user').val();
       var pswd = $('#pswd').val();
       
-      if (user === '') {
-        alert('This field cannot be left blank!');
-        return false;
-      }
-      if (pswd === '') {
+      if (user === '' || pswd=== '') {
         alert('This field cannot be left blank!');
         return false;
       }
@@ -50,10 +76,16 @@ jQuery(function($) {
       $('#login').append('Thank you for signing in! You are being redirected.');
       $('input#log').addClass('hide');
       
+      if(user === 'user' && pswd === 'password')
+      {
+        window.open(welcome\index.html);
+      }
+      
       e.preventDefault();
       
     });  
   })
+  */
   
   $('#menuToggle').on('click', function(e) {
     // Don't follow the #tools-jump link:
