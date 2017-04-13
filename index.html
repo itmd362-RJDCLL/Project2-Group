@@ -8,21 +8,21 @@
   </head>
   <body>
     <header class="h-card" id="header">
-      <h1 class="p-name">MyIIT Portal Login</h1>
+      <div id="top-bar">MyIIT Portal Login</div>
     </header>
     
-    <main class="content">
-      <form id="Login" action="#null" method="post" class="signin">
-        <div class="user">
+    <main id="login" class="content">
+      <form name="Log" id="Login" action="#null" method="get" class="signin">
+        <div id="user-input">
           <label for="user">Username:</label>
           <input type="text" id="user" name="user" placeholder="user" class="names" />
         </div>
-        <div class="pswd">
+        <div id="pswd-input">
           <label for="pswd">Password:</label>
           <input type="password" id="pswd" name="pswd" placeholder="******" class="password" />
         </div>
-        <div class="button">
-          <input type="submit" id="log" name="log" value="Login" class="login" />
+        <div id="button-input">
+          <input type="submit" id="submit" name="log" value="Log in" class="login" />
         </div>
       </form>
     </main>
