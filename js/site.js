@@ -6,7 +6,9 @@ jQuery(function($) {
   
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
-    
+  $('html').addClass('inactiveLink');
+  
+
   
    $('#class-form').on('submit', function(e) {
     $('html').toggleClass('itmd-selected');
@@ -94,6 +96,7 @@ jQuery(function($) {
     // line, inner click event, on #content,
     // will fire immediately:
     e.stopPropagation();
+    $('html').toggleClass('inactiveLink');
     $('html').toggleClass('has-toolbar');
     $('#page').on('click', function(e) {
       $('html').removeClass('has-toolbar');
