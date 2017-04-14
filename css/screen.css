@@ -430,7 +430,7 @@ video{
     opacity: 1;
     width: 100%;
     left: 0;
-    position:fixed;
+    position:static;
     padding-left:0.75em;
   }
 
