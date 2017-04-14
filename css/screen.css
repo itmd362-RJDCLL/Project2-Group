@@ -189,7 +189,6 @@ html {
   line-height:1.20em; /*20.5px  120%*/
   color: #000;
   background: #f5f5f5;
-  padding: 1.20em 0.75em ;
   padding-top: 0;
   
 }
@@ -288,11 +287,13 @@ nav a:hover {
 
 #page {
   transition: margin-left 1s;
+  padding: 1.20em 0.75em ;
+  padding-bottom:4.8em; /*4x line height */
 }
 #login {
   padding-top: 3.15em; /*53.79px*/
 }
-#header,
+#top-bar,
 #bottom-bar {
   box-sizing: border-box;
   margin-right: 0.75em;
@@ -311,13 +312,6 @@ nav a:hover {
   bottom: 0;
 }
 
-/*
-li:last-child {
-  padding: 1.22em;/* 16.5px;
-  padding-bottom: 0;
-  
-}
-*/
 #navigation {
   position: static; 
   top:0;
@@ -339,7 +333,6 @@ li:last-child {
   text-decoration: none;
   padding-bottom: 1.20em;
   padding: 1.29em;
-  margin-right: -5px;
   color: #000;
   text-align: center;  
 }
@@ -354,7 +347,7 @@ li:last-child {
 }
 
 
-
+#grades,
 #events,
 #numbers,
 #registration,
@@ -384,22 +377,14 @@ video{
   border-radius: 0.3em 0.3em 0.3em 0.3em;
 }
 
-/*
-header {
-  background: url(../img/myiitHeader.jpg) #222;
-  -webkit-background-size: 100%; 
-  -moz-background-size: 100%; 
-  -o-background-size: 100%; 
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; 
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: left;
-  position:static;
+#logout{
+  padding-top: 3.0em;
 }
-*/
+
+#grade-head{
+  background: #cecfd5;
+}
+
 /* ===== LAYOUT STYLES ===== */
 
 
@@ -407,9 +392,26 @@ header {
 
 
 /* ===== STATE STYLES ===== */
+/* 558 @ 16px/ 28.625em */
+@media screen and (min-width: 28.625em) {
+  table {
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border-bottom: 0.0625em solid #cecfd5;
+    padding: 0.624em 0.938em;
+  }
 
-/* 660 @ 16px/ 41.25em */
-@media screen and (min-width: 41.25em) {
+  tfoot tr:last-child td {
+    border-bottom: 0;
+  }
+
+}
+
+/* 668 @ 16px/ 41.75em */
+@media screen and (min-width: 41.75em) {
   .navigation li a {
     display: inline-block; 
   }
@@ -420,7 +422,7 @@ header {
   }
 
   .navigation {
-    height: 2.4em; 
+    height: 2.7em; 
 	  background: #ff0000;
   }
   
