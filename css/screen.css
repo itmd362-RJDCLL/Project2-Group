@@ -361,11 +361,11 @@ nav a:hover {
   padding-bottom: 1.20em;
   padding-top: 1.20em;
 }
-
+/*
 #list-classes{
   display:none;
 }
-
+*/
 .itmd-selected #itmd-classes {
   display: list-item;
 }
@@ -468,13 +468,7 @@ video{
   #ugrad,
   #ugrad-head{
     width: 100%;
-    top: 34%;
+    top: 60%;
   }
-  
-  th,
-  td {
-    border-bottom:0;
-    padding:0;
-  }
-  
+
 }
