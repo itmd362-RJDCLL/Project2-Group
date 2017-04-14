@@ -448,3 +448,33 @@ video{
   }
 
 }
+
+/* 736px @ 16px/ 46.0em */
+@media screen and (min-width: 46.0em) {
+  #grades, 
+  #sgrades-head {
+    float:left;
+    width: 50%;
+    border: solid #696969;
+  }
+  
+  #registration, 
+  #reg-head{
+    float:right;
+    margin-right:0;
+    width: 48%;    
+  }
+  
+  #ugrad,
+  #ugrad-head{
+    width: 100%;
+    top: 34%;
+  }
+  
+  th,
+  td {
+    border-bottom:0;
+    padding:0;
+  }
+  
+}
