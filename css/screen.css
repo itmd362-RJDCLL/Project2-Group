@@ -346,7 +346,10 @@ nav a:hover {
   pointer-events: auto;
 }
 
-
+#itmd361-sections,
+#itmd411-sections,
+#itms443-sections,
+#itms555-sections,
 #grades,
 #events,
 #numbers,
@@ -428,7 +431,7 @@ video{
 
   .navigation {
     height: 2.7em; 
-	  background: #ff0000;
+	  background: #eb0000;
   }
   
   .hasjs .navigation {

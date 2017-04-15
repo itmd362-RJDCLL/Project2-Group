@@ -65,13 +65,8 @@ jQuery(function($) {
     // line, inner click event, on #content,
     // will fire immediately:
     e.stopPropagation();
+
     
-    $('itmd-class-form').on('submit', function(e) {
-     $('itmd-class-form').append('hello');
-
-      window.location.replace('/itmd-sections/361/index.html');
-    })
-
     $('html').toggleClass('inactiveLink');
     $('html').toggleClass('has-toolbar');
     $('#page').on('click', function(e) {
