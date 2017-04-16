@@ -346,7 +346,33 @@ nav a:hover {
   pointer-events: auto;
 }
 
-#itmd361-sections,
+/*
+#list-classes{
+  display:none;
+}
+*/
+.itmd-selected #itmd-classes {
+  display: list-item;
+}
+
+img,
+video{
+  display: block;
+  max-width: 100%;
+  border-radius: 0.3em 0.3em 0.3em 0.3em;
+}
+
+/*
+#itmd2{
+  display: none;
+}
+*/
+
+
+/* ===== LAYOUT STYLES ===== */
+#itmd36102-section,
+#itmd36101-section,
+#itmd361-sections-table,
 #itmd411-sections,
 #itms443-sections,
 #itms555-sections,
@@ -364,21 +390,6 @@ nav a:hover {
   padding-bottom: 1.20em;
   padding-top: 1.20em;
 }
-/*
-#list-classes{
-  display:none;
-}
-*/
-.itmd-selected #itmd-classes {
-  display: list-item;
-}
-
-img,
-video{
-  display: block;
-  max-width: 100%;
-  border-radius: 0.3em 0.3em 0.3em 0.3em;
-}
 
 #logout{
   padding-top: 3.0em;
@@ -392,9 +403,14 @@ video{
   text-align:center;
 }
 
+#sections-form,
+#itmd361-sections {
+  display: none;
+}
 
-/* ===== LAYOUT STYLES ===== */
-
+#361sections-head{
+    background: #cecfd5;
+  }
 
 /* ===== MODULAR STYLES ===== */
 
@@ -414,6 +430,36 @@ video{
 
   tfoot tr:last-child td {
     border-bottom: 0;
+  }
+
+}
+
+/* 600px @ 16px /37.5em*/
+@media screen and (min-width: 37.5em) {
+  #itmd361-sections,
+  #sections-form{
+    display: inline-block;
+  }
+  #361sections-table{
+    display: table-row;
+    border: solid #696969;
+    border-radius: 0 0 0.6em 0.6em;
+
+  }
+  
+  #itmd361-sections-table {
+  border: solid #696969;
+  border-radius: 0 0 0.6em 0.6em;
+  }
+  
+
+  #test{
+    display: none;
+  }
+  
+  #36101-form,
+  #36202-section-form {
+    display: none;
   }
 
 }
