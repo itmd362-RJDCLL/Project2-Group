@@ -235,12 +235,13 @@ nav a:hover {
 
 .navigation {
   line-height:0.2em;
-  position:static;
   background-color: #ff0000;
   color: #000;
 	height: 100%; /*should it stretch the length of the page? */
 	background: #dcdcdc;
   position: absolute;
+  width: 50%;
+  margin-left: -50%;
 }
 
 
@@ -248,10 +249,8 @@ nav a:hover {
   pointer-events: none;
 }
 .hasjs .navigation{
- /* No transition on load or tool close */
-  opacity: 0;
-  position: absolute;
-  left: -50%; 
+  margin-left: -50%; 
+  transition: margin-left 1s;
 }
 
 
@@ -264,9 +263,8 @@ nav a:hover {
 
 
 .has-toolbar .navigation {
-  opacity: 1;
   padding-left: 1.2em;
-  margin-left: 50%;
+  margin-left: 0%;
   transition: margin-left 1s;
   width: 45%;
 }
