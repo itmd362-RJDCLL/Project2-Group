@@ -48,6 +48,11 @@ jQuery(function($) {
       if ($('#user').val() === 'user' && $('#pswd').val() === 'password') {
         window.location.replace('welcome\\index.html');
       }
+      else if ($('#user').val() === '' || $('#pswd').val() === '')
+      {
+        console.log('This field cannot be left blank');
+        $('#login').prepend('<div class="error">This field cannont be left blank</div>');
+      }
       else {
         console.log('Incorrect username or password');
         $('#login').prepend('<div class="error">Incorrect username or password</div>');
