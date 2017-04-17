@@ -407,9 +407,7 @@ label,
 
 .navigation li a {
   display: block;
-  padding: 1.20em;
   text-decoration: none;
-  padding-bottom: 1.20em;
   padding: 1.29em;
   color: #000;
   text-align: center;  
@@ -549,34 +547,33 @@ video{
     display: block;
   }
   .navigation li a {
-    display: inline-block; 
+    display: inline-block;
+    padding: 0em 1.29em 0em 1.29em;
+    line-height: 1.29em;
   }
 
   .navigation li,
   .navigation li:last-child {
-    display:inline;
-    border-bottom: 0.02em solid #f5f5f5;
-    background-color:#696969; 
-    margin-right: -1em;
+    display: inline;
+    border: 0;
+    background-color:#696969;
   }
-
 
   .navigation {
     height: 2.7em; 
-	  background: #eb0000;
+	  background-color: #eb0000;
   }
   
   .hasjs .navigation {
-    opacity: 1;
+    margin-left: 0;
     width: 100%;
     left: 0;
-    position:static;
-    padding-left:0.75em;
-    line-height: 4.8em;
+    position: static;
+    line-height: .4em;
   }
   
-  nav li:hover { 
-  background: #dc143c; 
+  nav li a:hover { 
+  background-color: #dc143c; 
   /* red color in case to keep the red nav #dc143c */
   color: #fff; 
 }
