@@ -7,6 +7,7 @@ jQuery(function($) {
   $('html').addClass('hasjs');
   $('html').addClass('inactiveLink');
   
+  /*
     //action for when search button is clicked
     $('#class-form').on('submit', function(e) {
     $('html').toggleClass('itmd-selected');
@@ -18,6 +19,8 @@ jQuery(function($) {
       $('html').toggleClass('itmd-selected');
       }   
     });
+    
+   */
     //end of search function
     
     //Toggle option "on/off" switch
@@ -62,6 +65,8 @@ jQuery(function($) {
     // line, inner click event, on #content,
     // will fire immediately:
     e.stopPropagation();
+
+    
     $('html').toggleClass('inactiveLink');
     $('html').toggleClass('has-toolbar');
     $('#page').on('click', function(e) {

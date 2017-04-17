@@ -13,8 +13,8 @@
 
   <nav id="navigation">
     <ul class="navigation">
-      <li><a id="inactiveLink" href="../Welcome">Welcome</a></li>
-      <li><a id="inactiveLink" href="../academics/index.html">Academics</a></li>
+      <li><a id="inactiveLink" href="../welcome">Welcome</a></li>
+      <li><a id="inactiveLink" href="../academics">Academics</a></li>
       <li><a id="inactiveLink" href="../Welcome" >Finances</a></li>
       <li><a id="inactiveLink" href="../Welcome">Athletics</a></li>
       <li><a id="inactiveLink" href="../Welcome">Work</a></li>
@@ -27,28 +27,78 @@
   
   <main id="page">
   
-    <li><a href="../Login">Log Out</a></li>
+    <li><a href="/index.html">Log Out</a></li>
+    
+    <figure id="iit">
+      <img src="../img/home.jpg" alt="IIT overview" />
+    </figure>
     
   
-    <h2>Student Grades</h2>
+    <h2 id="sgrades-head">Student Grades</h2>
     <!-- Default current semester show grades automatically -->
     <!-- Current midterm and final column, drop down box for selecting another semester -->
-    
-    <h2>Registration Tools</h2>
+    <section id="grades">
+    <a>Term: Spring 2017</a>
+      <table id="grade-table">
+          <colgroup span="5"></colgroup>
+          <tr id="grade-head">
+            <th>Course</th>
+            <th>Course Name</th>
+            <th>Current</th>
+            <th>Mid Term</th>
+            <th>Final</th>
+          </tr>
+          <tr>
+            <td>ITMD 362</td>
+            <td>Human-Computer Interaction and Web Design</td>
+            <td>F-</td>
+            <td>Z</td>
+            <td>Z</td>
+          </tr>
+          <tr>
+            <td>ITMD 411</td>
+            <td>Intermediate Software Development</td>
+            <td>B</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>ITMD 421</td>
+            <td>Data Modeling and Applications</td>
+            <td>A</td>
+            <td>D+</td>
+            <td>Z</td>
+          </tr>
+        </table>
+        <form id="semester-select" name="semester-select" method="get" action="#null">
+          <select>
+            <option value="" disabled="disabled" selected="selected">Select a semester</option>
+            <option value="fall2017">Fall 2017</option>
+            <option value="summer2017">Summer 2017</option>
+            <option value="spring2017">Spring 2017</option>
+            <option value="fall2016">Fall 2016</option>
+            <option value="summer2016">Summer 2016</option>
+            <option value="spring2016">Spring 2016</option>
+          </select>
+          <input type="submit" id="semester-select-submit" name="semester-select-submit" value="Go" />
+        </form>
+      </section>
+      
+    <h2 id="reg-head">Registration Tools</h2>
     <section id="registration">
-      <li><a href="../Academics/classes">Add or Drop Classes</a></li>
+      <li><a href="../Academics/Classes">Add or Drop Classes</a></li>
       <li><a href="../Welcome">Registration Status</a></li>
       <li>Registration Pin for Fall 2017: 830523</li>
     </section>
     
-    <h2>Undergraduate Academic Affairs</h2>
+    <h2 id="ugrad-head">Undergraduate Academic Affairs</h2>
     <section id="ugrad">
       <li><a href="../Academics">Undergraduate Degree Works</a></li>
       <li><a href="../Welcome">Co-Terminal Degree Program Application</a></li>
       <li><a href="../Academics">Undergraduate Application for Graduation</a></li>
     </section>
     
-    <h2>Graduate Academic Affairs</h2>
+    <h2 id="srad-head">Graduate Academic Affairs</h2>
     <section id="grad">
       <li><a href="../Academics">Graduate Degree Works</a></li>
       <li><a href="../Welcome">Graduate Application for Graduation</a></li>
