@@ -427,8 +427,14 @@ label,
   display:none;
 }
 */
-.itmd-selected #itmd-classes {
-  display: list-item;
+.bus-selected,
+.itmd-selected,
+.itmo-selected,
+.itms-selected,
+.psyc-selected,
+.soc-selected,
+{
+
 }
 
 img,

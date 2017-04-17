@@ -7,20 +7,45 @@ jQuery(function($) {
   $('html').addClass('hasjs');
   $('html').addClass('inactiveLink');
   
-  /*
-    //action for when search button is clicked
-    $('#class-form').on('submit', function(e) {
+/*  //action for when search button is clicked
+  $('#class-form').on('submit', function(e) {
     $('html').toggleClass('itmd-selected');
     $('#class-form').append('hello');
     var ele = document.getElementById('#classes');
     var selectedValue = ele.options[ele.selectedIndex].value;
     if(selectedValue=='itmd'){
-      $('#list-classes').apend('visible');
+      $('#list-classes').append('visible');
       $('html').toggleClass('itmd-selected');
-      }   
-    });
+    }   
+  });*/
+
+  $('#class-form').on('submit', function(e) {
+    e.preventDefault();
+    var choice = $('#classes').val();
     
-   */
+    if (choice == 'business') {
+      $('html').addClass('bus-select');
+    }
+    else if (choice == 'itmd') {
+      $('html').addClass('itmd-select');
+    }
+    else if (choice == 'itmo') {
+      $('html').addClass('itmo-select');
+    }
+    else if (choice == 'itms') {
+      $('html').addClass('itms-select');
+    }
+    else if (choice == 'psychology') {
+      $('html').addClass('psyc-select');
+    }
+    else if (choice == 'sociology') {
+      $('html').addClass('soc-select');
+    }
+    else {
+      alert("This message should not appear. If it does, contact us through github.");
+    }
+  })
+    
     //end of search function
     
     //Toggle option "on/off" switch
