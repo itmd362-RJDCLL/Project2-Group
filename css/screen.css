@@ -211,6 +211,13 @@ li {
   text-decoration: none;
 }
 
+nav #iitlogo{
+  width: 4.8em;
+  height: 4.8em;
+  float: left;
+  padding-left:0.75em;
+}
+
 .menu-icon {
 	padding: 10px 20px;
 	cursor: pointer;
@@ -474,6 +481,10 @@ video{
   .navigation li:last-child {
     display:inline;
   }
+  
+  .navigation ul li{
+    background-color: #fff;
+  }
 
   .navigation {
     height: 2.7em; 
@@ -486,6 +497,7 @@ video{
     left: 0;
     position:static;
     padding-left:0.75em;
+    line-height: 4.8em;
   }
 
   .menu-icon {
