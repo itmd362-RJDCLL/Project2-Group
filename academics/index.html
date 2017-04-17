@@ -25,20 +25,19 @@
   <input type="checkbox" id="menuToggle">
   <label for="menuToggle" class="menu-icon"></label>
   
-  <main id="page">
-  
-    <li><a href="/index.html">Log Out</a></li>
+  <main id="academics-page">
     
     <figure id="iit">
       <img src="../img/home.jpg" alt="IIT overview" />
     </figure>
     
-  
+    <section id="grades-and-reg">
+    <section id="student-grades">
     <h2 id="sgrades-head">Student Grades</h2>
     <!-- Default current semester show grades automatically -->
     <!-- Current midterm and final column, drop down box for selecting another semester -->
     <section id="grades">
-    <a>Term: Spring 2017</a>
+    <a id="current-term" >Term: Spring 2017</a>
       <table id="grade-table">
           <colgroup span="5"></colgroup>
           <tr id="grade-head">
@@ -83,26 +82,40 @@
           <input type="submit" id="semester-select-submit" name="semester-select-submit" value="Go" />
         </form>
       </section>
+      </section>
       
+    <section id="registration-tools">
     <h2 id="reg-head">Registration Tools</h2>
     <section id="registration">
-      <li><a href="../Academics/Classes">Add or Drop Classes</a></li>
-      <li><a href="../Welcome">Registration Status</a></li>
-      <li>Registration Pin for Fall 2017: 830523</li>
+      <ul id="reglist">
+        <li><a href="../Academics/Classes">Add or Drop Classes</a></li>
+        <li><a href="../Welcome">Registration Status</a></li>
+        <li>Registration Pin for Fall 2017: 830523</li>
+      </ul>
+    </section>
+    </section>
     </section>
     
+    <section id="undergrad-affairs">
     <h2 id="ugrad-head">Undergraduate Academic Affairs</h2>
     <section id="ugrad">
-      <li><a href="../Academics">Undergraduate Degree Works</a></li>
-      <li><a href="../Welcome">Co-Terminal Degree Program Application</a></li>
-      <li><a href="../Academics">Undergraduate Application for Graduation</a></li>
+      <ul id="ugradlist">
+        <li><a href="../Academics">Undergraduate Degree Works</a></li>
+        <li><a href="../Welcome">Co-Terminal Degree Program Application</a></li>
+        <li><a href="../Academics">Undergraduate Application for Graduation</a></li>
+      </ul>
+    </section>
     </section>
     
+    <section id="grad-affairs">
     <h2 id="srad-head">Graduate Academic Affairs</h2>
     <section id="grad">
-      <li><a href="../Academics">Graduate Degree Works</a></li>
-      <li><a href="../Welcome">Graduate Application for Graduation</a></li>
-    </section>  
+      <ul id="gradlist">
+        <li><a href="../Academics">Graduate Degree Works</a></li>
+        <li><a href="../Welcome">Graduate Application for Graduation</a></li>
+      </ul>
+    </section> 
+    </section>    
   
  
 
