@@ -189,7 +189,6 @@ html {
   line-height:1.20em; /*20.5px  120%*/
   color: #000;
   background: #f5f5f5;
-  padding: 1.20em 0.75em ;
   padding-top: 0;
   
 }
@@ -197,7 +196,7 @@ html {
 h2 {
   font-size: 1.26em; /*21.516px*/
   line-height: 1.20em; /*25.819px*/
-  background: #ff0000;
+  background: #eb0000;
   border-radius: 0.6em 0.6em 0 0;
   text-align: center;
  /* border-bottom: 0.02em solid #fff;*/
@@ -210,6 +209,13 @@ li {
   padding-left: 0;
   padding-bottom: 0.60em; /* 10.25px, half of the gridline */
   text-decoration: none;
+}
+
+nav #iitlogo{
+  width: 4.8em;
+  height: 4.8em;
+  float: left;
+  padding-left:0.75em;
 }
 
 .menu-icon {
@@ -288,16 +294,18 @@ nav a:hover {
 
 #page {
   transition: margin-left 1s;
+  padding: 1.20em 0.75em ;
+  padding-bottom:4.8em; /*4x line height */
 }
 #login {
   padding-top: 3.15em; /*53.79px*/
 }
-#header,
+#top-bar,
 #bottom-bar {
   box-sizing: border-box;
   margin-right: 0.75em;
   position: fixed;
-  background: #ff0000;
+  background: #eb0000;
   display: block;
   width: 100%;
   font-size: 1.26em; /*21.516px*/
@@ -311,13 +319,6 @@ nav a:hover {
   bottom: 0;
 }
 
-/*
-li:last-child {
-  padding: 1.22em;/* 16.5px;
-  padding-bottom: 0;
-  
-}
-*/
 #navigation {
   position: static; 
   top:0;
@@ -339,7 +340,6 @@ li:last-child {
   text-decoration: none;
   padding-bottom: 1.20em;
   padding: 1.29em;
-  margin-right: -5px;
   color: #000;
   text-align: center;  
 }
@@ -353,8 +353,37 @@ li:last-child {
   pointer-events: auto;
 }
 
+/*
+#list-classes{
+  display:none;
+}
+*/
+.itmd-selected #itmd-classes {
+  display: list-item;
+}
+
+img,
+video{
+  display: block;
+  max-width: 100%;
+  border-radius: 0.3em 0.3em 0.3em 0.3em;
+}
+
+/*
+#itmd2{
+  display: none;
+}
+*/
 
 
+/* ===== LAYOUT STYLES ===== */
+#itmd36102-section,
+#itmd36101-section,
+#itmd361-sections-table,
+#itmd411-sections,
+#itms443-sections,
+#itms555-sections,
+#grades,
 #events,
 #numbers,
 #registration,
@@ -369,47 +398,81 @@ li:last-child {
   padding-top: 1.20em;
 }
 
-#list-classes{
-  display:none;
+#logout{
+  padding-top: 3.0em;
 }
 
-.itmd-selected #itmd-classes {
-  display: list-item;
+#grade-head{
+  background: #cecfd5;
 }
 
-img,
-video{
-  display: block;
-  max-width: 100%;
-  border-radius: 0.3em 0.3em 0.3em 0.3em;
+#semester-select{
+  text-align:center;
 }
 
-/*
-header {
-  background: url(../img/myiitHeader.jpg) #222;
-  -webkit-background-size: 100%; 
-  -moz-background-size: 100%; 
-  -o-background-size: 100%; 
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover; 
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: left;
-  position:static;
+#sections-form,
+#itmd361-sections {
+  display: none;
 }
-*/
-/* ===== LAYOUT STYLES ===== */
 
+#361sections-head{
+    background: #cecfd5;
+  }
 
 /* ===== MODULAR STYLES ===== */
 
 
 /* ===== STATE STYLES ===== */
+/* 558 @ 16px/ 28.625em */
+@media screen and (min-width: 28.625em) {
+  table {
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border-bottom: 0.0625em solid #cecfd5;
+    padding: 0.624em 0.938em;
+  }
 
-/* 660 @ 16px/ 41.25em */
-@media screen and (min-width: 41.25em) {
+  tfoot tr:last-child td {
+    border-bottom: 0;
+  }
+
+}
+
+/* 600px @ 16px /37.5em*/
+@media screen and (min-width: 37.5em) {
+  #itmd361-sections,
+  #sections-form{
+    display: inline-block;
+  }
+  #361sections-table{
+    display: table-row;
+    border: solid #696969;
+    border-radius: 0 0 0.6em 0.6em;
+
+  }
+  
+  #itmd361-sections-table {
+  border: solid #696969;
+  border-radius: 0 0 0.6em 0.6em;
+  }
+  
+
+  #test{
+    display: none;
+  }
+  
+  #36101-form,
+  #36202-section-form {
+    display: none;
+  }
+
+}
+
+/* 668 @ 16px/ 41.75em */
+@media screen and (min-width: 41.75em) {
   .navigation li a {
     display: inline-block; 
   }
@@ -418,18 +481,23 @@ header {
   .navigation li:last-child {
     display:inline;
   }
+  
+  .navigation ul li{
+    background-color: #fff;
+  }
 
   .navigation {
-    height: 2.4em; 
-	  background: #ff0000;
+    height: 2.7em; 
+	  background: #eb0000;
   }
   
   .hasjs .navigation {
     opacity: 1;
     width: 100%;
     left: 0;
-    position:fixed;
+    position:static;
     padding-left:0.75em;
+    line-height: 4.8em;
   }
 
   .menu-icon {
@@ -438,6 +506,30 @@ header {
   
   .inactiveLink #inactiveLink{
   pointer-events: auto;
+  }
+
+}
+
+/* 736px @ 16px/ 46.0em */
+@media screen and (min-width: 46.0em) {
+  #grades, 
+  #sgrades-head {
+    float:left;
+    width: 50%;
+    border: solid #696969;
+  }
+  
+  #registration, 
+  #reg-head{
+    float:right;
+    margin-right:0;
+    width: 48%;    
+  }
+  
+  #ugrad,
+  #ugrad-head{
+    width: 100%;
+    top: 60%;
   }
 
 }
