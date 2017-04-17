@@ -299,6 +299,47 @@ nav a:hover {
 }
 #login {
   padding-top: 3.15em; /*53.79px*/
+  text-align: center;
+}
+#login-page {
+  height: 100%;
+  background: #CC0000;
+  background: -webkit-linear-gradient(#CC0000, #777777);
+  background: -moz-linear-gradient(#CC0000, #777777);
+  background: linear-gradient(to right bottom, #CC0000, #777777);
+  padding: 3em;
+}
+#login-header {
+  font-family: Arial;
+}
+#Login {
+  background-color: #FFF;
+  padding: 1.625em; /*26.895px*/
+  border-radius: 1em;
+  font-size: 1em;
+}
+.error {
+  font-weight: bold;
+  padding-bottom: 0.75em;
+}
+#user-input,
+#pswd-input,
+#button-input {
+  padding-bottom: 0.75em;
+}
+label,
+#show-toggle {
+  display: block;
+  padding-bottom: 0.5em;
+}
+#user,
+#pswd,
+#submit {
+  background-color: #ECF0F1;
+}
+#submit:hover {
+  background-color: #CC0000;
+  color: #ECF0F1;
 }
 #top-bar,
 #bottom-bar {
@@ -313,6 +354,11 @@ nav a:hover {
   text-align: center;
   line-height: 2.4em;
   max-width: 100%
+}
+
+#loginbar {
+  text-align: center;
+  font-size: 2.4em;
 }
 
 #bottom-bar {
