@@ -292,11 +292,38 @@ nav a:hover {
   overflow-x: hidden;
 }
 
-#page {
+#student-grades,
+#registration-tools,
+#undergrad-affairs,
+#grad-affairs {
+  padding: 0.25em;
+}
+#reglist,
+#ugradlist,
+#gradlist {
+  padding-left: 0.25em;
+}
+#current-term {
+  padding: 0.25em;
+}
+
+
+
+#page,
+#academics-page {
   transition: margin-left 1s;
   padding: 1.20em 0.75em ;
   padding-bottom:4.8em; /*4x line height */
 }
+#example-com {
+  background-color: #ECF0F1;
+}
+#events,
+#numbers {
+  background-color: #e5e5e5;
+}
+
+
 #login {
   padding-top: 3.15em; /*53.79px*/
   text-align: center;
@@ -464,6 +491,7 @@ video{
 #361sections-head{
     background: #cecfd5;
   }
+  
 
 /* ===== MODULAR STYLES ===== */
 
@@ -556,26 +584,20 @@ video{
 
 }
 
-/* 736px @ 16px/ 46.0em */
-@media screen and (min-width: 46.0em) {
-  #grades, 
-  #sgrades-head {
-    float:left;
-    width: 50%;
-    border: solid #696969;
+/* 848px @ 16px/ 53.0em */
+@media screen and (min-width: 53.0em) {
+  
+  #grades-and-reg {
+    display: flex;
+    flex-direction: row;
   }
   
-  #registration, 
-  #reg-head{
-    float:right;
-    margin-right:0;
-    width: 48%;    
+  #student-grades {
+    order: 1;
+    width: 50vw;
   }
-  
-  #ugrad,
-  #ugrad-head{
-    width: 100%;
-    top: 60%;
+  #registration-tools {
+    order: 2;
+    width: 50vw;
   }
-
 }
