@@ -475,7 +475,8 @@ video{
 #numbers,
 #registration,
 #ugrad,
-#grad {
+#grad,
+#worksheet-table-secs {
   border: solid #696969;
   border-radius: 0 0 0.6em 0.6em;
 }

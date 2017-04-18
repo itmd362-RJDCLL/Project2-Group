@@ -19,6 +19,7 @@
       <li><a id="inactiveLink" href="../Welcome">Athletics</a></li>
       <li><a id="inactiveLink" href="../Welcome">Work</a></li>
       <li><a id="inactiveLink" href="../Welcome">Student Life</a></li>
+      <li><a href="/index.html">Log Out</a></li>
     </ul>
   </nav>
   
@@ -26,17 +27,37 @@
   <label for="menuToggle" class="menu-icon"></label>
   
   <main id="page">
-  
-    <li><a href="/index.html">Log Out</a></li>
     
-    <h2> Worksheet </h2>
-    
+    <section id="worksheet-table-sec">
+      <h2> Worksheet </h2>
+      <section id="worksheet-table-secs">
+      <table id="worksheet-table">
+        <colgroup span="7"></colgroup>
+            <tr id="worksheet-head">
+              <th>Select</th>
+              <th>Subject ID</th>
+              <th>Title</th>
+              <th>Sec</th>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Instructor</th>
+            </tr>
+      </table>
+      </section>
+      
+      <div id="drop-button">
+        <form id="drop" method="get" action="#null">
+          <input type="submit" id="drop" name="drop-class" value="Drop Class"/>
+        </form>
+      </div>
+      
+    </section>   
     
   </main>
   
   <footer id="bottom-bar">See ya later Hater</footer>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../js/site.js"></script>
+  <script src="../../js/site.js"></script>
 </body>
 </html>
