@@ -245,12 +245,8 @@ nav a:hover {
 }
 
 
-.inactiveLink #inactiveLink{
-  pointer-events: none;
-}
 .hasjs .navigation{
   margin-left: -50%; 
-  transition: margin-left 1s;
 }
 
 
@@ -283,7 +279,8 @@ nav a:hover {
 }
 */
 
-.has-toolbar #page {
+.has-toolbar #page,
+.has-toolbar #academics-page {
   margin-left: 50%;
 
 }
@@ -415,15 +412,6 @@ label,
   padding: 1.29em;
   color: #000;
   text-align: center;  
-}
-
-
-.inactiveLink #events,
-.inactiveLink #numbers,
-.inactiveLink #registration,
-.inactiveLink #ugrad,
-.inactiveLink #grad {
-  pointer-events: auto;
 }
 
 #bus-classes,
@@ -575,7 +563,6 @@ video{
   .navigation li:last-child {
     display: inline;
     border: 0;
-    background-color:#696969;
   }
 
   .navigation {
@@ -588,7 +575,7 @@ video{
     width: 100%;
     left: 0;
     position: static;
-    line-height: .4em;
+    line-height: 2.7em;
   }
   
   nav li a:hover { 
@@ -599,10 +586,6 @@ video{
 
   .menu-icon {
     display: none; 
-  }
-  
-  .inactiveLink #inactiveLink{
-  pointer-events: auto;
   }
 
 }
