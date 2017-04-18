@@ -61,7 +61,10 @@ jQuery(function($) {
     
     //end of search function
 
-  
+  $('#register-submit36101').on('submit', function(e) {
+    e.preventDefault();
+    alert("something");
+  })
     
     //Toggle option "on/off" switch
     function toggleLabel(oldLabel, newLabel, label) {
