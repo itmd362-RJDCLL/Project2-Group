@@ -3,6 +3,8 @@ $.noConflict();
 // jQuery 3.x-style ready event and locally scoped $
 jQuery(function($) {
   
+  var courses = [];
+
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
   $('html').addClass('inactiveLink');
@@ -61,9 +63,23 @@ jQuery(function($) {
     
     //end of search function
 
-  $('#register-submit36101').on('submit', function(e) {
+  $('#36101-form').on('submit', function(e) {
     e.preventDefault();
     alert("something");
+  })
+  $('#36102-form').on('submit', function(e) {
+    e.preventDefault();
+    alert("something");
+  })
+  $('#3610102-form').on('submit', function(e) {
+    e.preventDefault();
+    if($('#36101-select').is(':checked')) {
+      courses.push('36101');
+    }
+    if($('#36102-select').is(':checked')) {
+      courses.push('36102');
+    }
+    //alert(courses); this works
   })
     
     //Toggle option "on/off" switch
