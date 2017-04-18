@@ -19,10 +19,23 @@ jQuery(function($) {
     }   
   });*/
 
+  function clearOld() {
+    //JS won't complain if we try remove a class that
+    //doesn't exist on the object
+    $('html').removeClass('bus-select');
+    $('html').removeClass('itmd-select');
+    $('html').removeClass('itmo-select');
+    $('html').removeClass('itms-select');
+    $('html').removeClass('psyc-select');
+    $('html').removeClass('soc-select');
+  }
+
   $('#class-form').on('submit', function(e) {
     e.preventDefault();
     var choice = $('#classes').val();
-    
+    $('html').removeClass('no-select');
+    clearOld();
+
     if (choice == 'business') {
       $('html').addClass('bus-select');
     }
