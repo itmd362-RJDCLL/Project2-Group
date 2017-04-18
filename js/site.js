@@ -22,12 +22,12 @@ jQuery(function($) {
   function clearOld() {
     //JS won't complain if we try remove a class that
     //doesn't exist on the object
-    $('html').removeClass('bus-select');
-    $('html').removeClass('itmd-select');
-    $('html').removeClass('itmo-select');
-    $('html').removeClass('itms-select');
-    $('html').removeClass('psyc-select');
-    $('html').removeClass('soc-select');
+    $('#bus-classes').removeClass('bus-select');
+    $('#itmd-classes').removeClass('itmd-select');
+    $('#itmo-classes').removeClass('itmo-select');
+    $('#itms-classes').removeClass('itms-select');
+    $('#psy-classes').removeClass('psy-select');
+    $('#socio-classes').removeClass('socio-select');
   }
 
   $('#class-form').on('submit', function(e) {
@@ -37,22 +37,22 @@ jQuery(function($) {
     clearOld();
 
     if (choice == 'business') {
-      $('html').addClass('bus-select');
+      $('#bus-classes').addClass('bus-select');
     }
     else if (choice == 'itmd') {
-      $('html').addClass('itmd-select');
+      $('#itmd-classes').addClass('itmd-select');
     }
     else if (choice == 'itmo') {
-      $('html').addClass('itmo-select');
+      $('#itmo-classes').addClass('itmo-select');
     }
     else if (choice == 'itms') {
-      $('html').addClass('itms-select');
+      $('#itms-classes').addClass('itms-select');
     }
     else if (choice == 'psychology') {
-      $('html').addClass('psyc-select');
+      $('#psy-classes').addClass('psy-select');
     }
     else if (choice == 'sociology') {
-      $('html').addClass('soc-select');
+      $('#socio-classes').addClass('socio-select');
     }
     else {
       alert("This message should not appear. If it does, contact us through github.");

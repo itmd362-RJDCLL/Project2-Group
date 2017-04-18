@@ -422,20 +422,25 @@ label,
   pointer-events: auto;
 }
 
-/*
-#list-classes{
-  display:none;
+#bus-classes,
+#itmd-classes,
+#itmo-classes,
+#itms-classes,
+#psy-classes,
+#socio-classes {
+  visibility: hidden;
+  position: absolute;
 }
-*/
-.bus-selected,
-.itmd-selected,
-.itmo-selected,
-.itms-selected,
-.psyc-selected,
-.soc-selected,
-{
 
+#bus-classes.bus-select,
+#itmd-classes.itmd-select,
+#itmo-classes.itmo-select,
+#itms-classes.itms-select,
+#psy-classes.psy-select,
+#socio-classes.socio-select {
+  visibility: visible;
 }
+
 
 img,
 video{
