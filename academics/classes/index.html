@@ -12,13 +12,14 @@
   </header>
 
   <nav id="navigation">
+    <figure id="iitlogo">
+      <img src="../../img/iitlogo.png" alt="logo" />
+    </figure>
     <ul class="navigation">
-      <li><a id="inactiveLink" href="../Welcome">Welcome</a></li>
-      <li><a id="inactiveLink" href="../academics/index.html">Academics</a></li>
-      <li><a id="inactiveLink" href="../Welcome" >Finances</a></li>
-      <li><a id="inactiveLink" href="../Welcome">Athletics</a></li>
-      <li><a id="inactiveLink" href="../Welcome">Work</a></li>
-      <li><a id="inactiveLink" href="../Welcome">Student Life</a></li>
+      <li><a href="../Welcome">Welcome</a></li>
+      <li><a href="../academics/index.html">Academics</a></li>
+      <li><a href="../Welcome" >Finances</a></li>
+      <li><a href="../Welcome">Work</a></li>
       <li><a href="/index.html">Log Out</a></li>
     </ul>
   </nav>
@@ -27,9 +28,11 @@
   <label for="menuToggle" class="menu-icon"></label>
   
   <main id="page">
+  
+  <h2>Look Up Classes</h2>
       
     <form id="class-form" name="class-form" method="get" action="#null">
-      <select id="classes" name="classes[]" multiple="multiple" size="5">
+      <select id="classes">
         <option value="business">Business</option>
         <option value="itmd">ITM Development</option>
         <option value="itmo">ITM Operation</option>
@@ -50,13 +53,11 @@
       </ul>
       <ul id="itmd-classes">
         <form id="itmd-class-form" name="itmd-class-form" method="get">
-          <li> 361 Fundamentals of Web Development </li>
-          <input type="submit" id="itmd361-submit" formaction="../itmd-sections/361" name="itmd361-submit" value="View Sections" />
-          <li> 411 Intermediate Software Development </li>
-          <input type="submit" id="itmd411-submit" formaction="../itmd-sections/411" name="itmd411-submit" value="View Sections" />
-          <li> 460 Fundamentals of Multimedia </li>
-          <li> 466 Service Oriented Architecture </li>
-          <li> 467 Web Systems Integration </li>
+          <li> 361 Fundamentals of Web Development <input type="submit" id="itmd361-submit" formaction="../itmd-sections/361" name="itmd361-submit" value="View Sections" /></li>
+          <li> 411 Intermediate Software Development <input type="submit" id="itmd411-submit" formaction="../itmd-sections/411" name="itmd411-submit" value="View Sections" /></li>
+          <li> 460 Fundamentals of Multimedia <input type="submit" name="null-submit" value="View Sections" /></li>
+          <li> 466 Service Oriented Architecture <input type="submit" name="null-submit" value="View Sections" /></li>
+          <li> 467 Web Systems Integration <input type="submit" name="null-submit" value="View Sections" /></li>
         </form>
       </ul>
       <ul id="itmo-classes">
