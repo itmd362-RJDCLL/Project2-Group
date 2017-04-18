@@ -294,12 +294,16 @@ nav a:hover {
 #student-grades,
 #registration-tools,
 #undergrad-affairs,
-#grad-affairs {
+#grad-affairs,
+#eventssec,
+#numberssec {
   padding: 0.25em;
 }
 #reglist,
 #ugradlist,
-#gradlist {
+#gradlist,
+#events,
+#numbers {
   padding-left: 0.25em;
 }
 #current-term {
