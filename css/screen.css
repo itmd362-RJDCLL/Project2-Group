@@ -444,13 +444,6 @@ video{
   border-radius: 0.3em 0.3em 0.3em 0.3em;
 }
 
-/*
-#itmd2{
-  display: none;
-}
-*/
-
-
 /* ===== LAYOUT STYLES ===== */
 #itmd36102-section,
 #itmd36101-section,
@@ -493,6 +486,10 @@ video{
 
 #361sections-head{
   background: #cecfd5;
+}
+
+select{ 
+  width: 100%;
 }
   
 
@@ -550,6 +547,9 @@ video{
 
 /* 668 @ 16px/ 41.75em */
 @media screen and (min-width: 41.75em) {
+  select{
+    width: 50%;
+  }
   #iitlogo{
     display: block;
   }
