@@ -79,8 +79,28 @@ jQuery(function($) {
     if($('#36102-select').is(':checked')) {
       courses.push('36102');
     }
-    //alert(courses); this works
+    window.location.replace('../../worksheet');
+    
   })
+  
+  //----------WORKSHEET-----------------
+  
+  for (var i = 0; i <= courses.length; i++) {
+    if (courses[i] === '36101') {
+      $('#worksheet-table').append('<tr>' +
+              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td>ITMD 361</td>' +
+              '<td>Fundamentals of Web Design</td>' +
+              '<th>01</th>' +
+              '<td>WF</td>' +
+              '<td>11:25am-12:40pm</td>' +
+              '<td>Karl Stolley</td>' +
+            '</tr>');
+    }
+    
+  }
+  
+  //----------END WORKSHEET-------------
     
     //Toggle option "on/off" switch
     function toggleLabel(oldLabel, newLabel, label) {
