@@ -60,6 +60,8 @@ jQuery(function($) {
   })
     
     //end of search function
+
+  
     
     //Toggle option "on/off" switch
     function toggleLabel(oldLabel, newLabel, label) {
