@@ -426,13 +426,27 @@ label,
   pointer-events: auto;
 }
 
-/*
-#list-classes{
-  display:none;
+#bus-classes,
+#itmd-classes,
+#itmo-classes,
+#itms-classes,
+#psy-classes,
+#socio-classes {
+  visibility: hidden;
+  position: absolute;
 }
-*/
-.itmd-selected #itmd-classes {
-  display: list-item;
+
+#bus-classes.bus-select,
+#itmd-classes.itmd-select,
+#itmo-classes.itmo-select,
+#itms-classes.itms-select,
+#psy-classes.psy-select,
+#socio-classes.socio-select {
+  visibility: visible;
+}
+
+#list-classes {
+  margin-top: 0.79em;
 }
 
 img,
@@ -489,8 +503,8 @@ video{
 }
 
 #361sections-head{
-    background: #cecfd5;
-  }
+  background: #cecfd5;
+}
   
 
 /* ===== MODULAR STYLES ===== */
