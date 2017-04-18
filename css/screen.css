@@ -441,6 +441,9 @@ label,
   visibility: visible;
 }
 
+#list-classes {
+  margin-top: 0.79em;
+}
 
 img,
 video{
@@ -496,8 +499,8 @@ video{
 }
 
 #361sections-head{
-    background: #cecfd5;
-  }
+  background: #cecfd5;
+}
   
 
 /* ===== MODULAR STYLES ===== */
