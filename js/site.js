@@ -2,24 +2,12 @@ $.noConflict();
 
 // jQuery 3.x-style ready event and locally scoped $
 jQuery(function($) {
-  
-  var courses = [];
+ //var courses = [];
 
   $('html').removeClass('nojs');
   $('html').addClass('hasjs');
   $('html').addClass('inactiveLink');
   
-/*  //action for when search button is clicked
-  $('#class-form').on('submit', function(e) {
-    $('html').toggleClass('itmd-selected');
-    $('#class-form').append('hello');
-    var ele = document.getElementById('#classes');
-    var selectedValue = ele.options[ele.selectedIndex].value;
-    if(selectedValue=='itmd'){
-      $('#list-classes').append('visible');
-      $('html').toggleClass('itmd-selected');
-    }   
-  });*/
 
   function clearOld() {
     //JS won't complain if we try remove a class that
@@ -63,21 +51,49 @@ jQuery(function($) {
     
     //end of search function
 
+  //361 submit forms for data
   $('#36101-form').on('submit', function(e) {
     e.preventDefault();
     alert("something");
+    setCookie('class36101','36101',1);
   })
   $('#36102-form').on('submit', function(e) {
     e.preventDefault();
     alert("something");
+    setCookie('class36102','36102',1);
   })
   $('#3610102-form').on('submit', function(e) {
     e.preventDefault();
     if($('#36101-select').is(':checked')) {
-      courses.push('36101');
+      setCookie('class36101','36101',1);
+      console.log("cookie set is "+getCookie('class'));
     }
     if($('#36102-select').is(':checked')) {
-      courses.push('36102');
+      setCookie('class36102','36102',1);
+    }
+    window.location.replace('../../worksheet');
+    
+  })
+  
+  //411 submit forms for data
+  $('#41101-form').on('submit', function(e) {
+    e.preventDefault();
+    alert("something");
+    setCookie('class41101','41101',1);
+  })
+  $('#41102-form').on('submit', function(e) {
+    e.preventDefault();
+    alert("something");
+    setCookie('class41102','41102',1);
+  })
+  $('#4110102-form').on('submit', function(e) {
+    e.preventDefault();
+    if($('#41101-select').is(':checked')) {
+      setCookie('class41101','41101',1);
+      console.log("cookie set is "+getCookie('class'));
+    }
+    if($('#41102-select').is(':checked')) {
+      setCookie('class41102','41102',1);
     }
     window.location.replace('../../worksheet');
     
@@ -85,8 +101,61 @@ jQuery(function($) {
   
   //----------WORKSHEET-----------------
   
-  for (var i = 0; i <= courses.length; i++) {
-    if (courses[i] === '36101') {
+  if(getCookie('class36101')==='36101')
+  {
+    $('#worksheet-table').append('<tr>' +
+              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td>ITMD 361</td>' +
+              '<td>Fundamentals of Web Design</td>' +
+              '<th>01</th>' +
+              '<td>WF</td>' +
+              '<td>11:25am-12:40pm</td>' +
+              '<td>Karl Stolley</td>' +
+            '</tr>');
+  }
+  
+  if(getCookie('class36102')==='36102')
+    {
+    $('#worksheet-table').append('<tr>' +
+              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td>ITMD 361</td>' +
+              '<td>Fundamentals of Web Design</td>' +
+              '<th>02</th>' +
+              '<td>WF</td>' +
+              '<td>11:25am-12:40pm</td>' +
+              '<td>Karl Stolley</td>' +
+            '</tr>');
+  }
+  
+  if(getCookie('class41101')==='41101')
+    {
+    $('#worksheet-table').append('<tr>' +
+              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td>ITMD 411</td>' +
+              '<td>Intermediate Software Development</td>' +
+              '<th>01</th>' +
+              '<td>TR</td>' +
+              '<td>11:25am-12:40pm</td>' +
+              '<td>James Papademas</td>' +
+            '</tr>');
+  }
+  
+  if(getCookie('class41102')==='41102')
+    {
+    $('#worksheet-table').append('<tr>' +
+              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td>ITMD 411</td>' +
+              '<td>Intermediate Software Development</td>' +
+              '<th>01</th>' +
+              '<td>TR</td>' +
+              '<td>11:25am-12:40pm</td>' +
+              '<td>James Papademas</td>' +
+            '</tr>');
+  }
+
+  
+ /* for (var i = 0; i <= courses3.length; i++) {
+    if (courses3[i] === getCookie('36101')) {
       $('#worksheet-table').append('<tr>' +
               '<td><input id="36101-select"type="checkbox" /></td>' +
               '<td>ITMD 361</td>' +
@@ -98,7 +167,7 @@ jQuery(function($) {
             '</tr>');
     }
     
-  }
+  }*/
   
   //----------END WORKSHEET-------------
     
@@ -140,6 +209,46 @@ jQuery(function($) {
       e.preventDefault();
     });
     //end of login action
+
+//sets the cookie name, value, and days until it expires    
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//returns the value of the stored cookie  
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+//for testiing purposes if you need to check if a cookie was stored
+//don't need it for our project
+function checkCookie() {
+    var username = getCookie("testing2");
+    if (username != "") {
+        alert("Welcome again " + username);
+    } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+            setCookie("username", username, 365);
+        }
+    }
+}
+
   
     //pull out menu for navigation
     $('#menuToggle').on('click', function(e) {

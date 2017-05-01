@@ -445,10 +445,13 @@ video{
 }
 
 /* ===== LAYOUT STYLES ===== */
+#itmd41102-section,
+#itmd41101-section,
+#itmd411-sections-table,
 #itmd36102-section,
 #itmd36101-section,
 #itmd361-sections-table,
-#itmd411-sections,
+/*#itmd411-sections,*/
 #itms443-sections,
 #itms555-sections,
 #grades,
@@ -480,7 +483,8 @@ video{
 }
 
 #sections-form,
-#itmd361-sections {
+#itmd361-sections,
+#itmd411-sections {
   display: none;
 }
 
