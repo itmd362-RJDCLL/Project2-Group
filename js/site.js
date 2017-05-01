@@ -54,13 +54,13 @@ jQuery(function($) {
   //361 submit forms for data
   $('#36101-form').on('submit', function(e) {
     e.preventDefault();
-    alert("something");
     setCookie('class36101','36101',1);
+    window.location.replace('../../worksheet');
   })
   $('#36102-form').on('submit', function(e) {
     e.preventDefault();
-    alert("something");
     setCookie('class36102','36102',1);
+    window.location.replace('../../worksheet');
   })
   $('#3610102-form').on('submit', function(e) {
     e.preventDefault();
@@ -78,13 +78,13 @@ jQuery(function($) {
   //411 submit forms for data
   $('#41101-form').on('submit', function(e) {
     e.preventDefault();
-    alert("something");
     setCookie('class41101','41101',1);
+    window.location.replace('../../worksheet');
   })
   $('#41102-form').on('submit', function(e) {
     e.preventDefault();
-    alert("something");
     setCookie('class41102','41102',1);
+    window.location.replace('../../worksheet');
   })
   $('#4110102-form').on('submit', function(e) {
     e.preventDefault();
