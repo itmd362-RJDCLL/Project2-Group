@@ -54,7 +54,7 @@ jQuery(function($) {
   //361 submit forms for data
   $('#36101-form').on('submit', function(e) {
     e.preventDefault();
-    setCookie('class36101','36101',1);
+    setCookie('class-36101','361-01',1);
     window.location.replace('../../worksheet');
   })
   $('#36102-form').on('submit', function(e) {
@@ -64,12 +64,12 @@ jQuery(function($) {
   })
   $('#3610102-form').on('submit', function(e) {
     e.preventDefault();
-    if($('#36101-select').is(':checked')) {
-      setCookie('class36101','36101',1);
+    if($('#361-01-select').is(':checked')) {
+      setCookie('class-36101','361-01',1);
       console.log("cookie set is "+getCookie('class'));
     }
-    if($('#36102-select').is(':checked')) {
-      setCookie('class36102','36102',1);
+    if($('#361-02-select').is(':checked')) {
+      setCookie('class-36102','361-02',1);
     }
     window.location.replace('../../worksheet');
     
@@ -88,12 +88,12 @@ jQuery(function($) {
   })
   $('#4110102-form').on('submit', function(e) {
     e.preventDefault();
-    if($('#41101-select').is(':checked')) {
-      setCookie('class41101','41101',1);
+    if($('#411-01-select').is(':checked')) {
+      setCookie('class411-01','411-01',1);
       console.log("cookie set is "+getCookie('class'));
     }
-    if($('#41102-select').is(':checked')) {
-      setCookie('class41102','41102',1);
+    if($('#411-02-select').is(':checked')) {
+      setCookie('class41102','411-02',1);
     }
     window.location.replace('../../worksheet');
     
@@ -101,7 +101,7 @@ jQuery(function($) {
   
   //----------WORKSHEET-----------------
   
-  if(getCookie('class36101')==='36101')
+ /* if(getCookie('class36101')==='36101')
   {
     $('#worksheet-table').append('<tr>' +
               '<td><input id="36101-select"type="checkbox" /></td>' +
@@ -113,8 +113,8 @@ jQuery(function($) {
               '<td>Karl Stolley</td>' +
             '</tr>');
   }
-  
-  if(getCookie('class36102')==='36102')
+  */
+  if(getCookie('class-36102')==='361-02')
     {
     $('#worksheet-table').append('<tr>' +
               '<td><input id="36101-select"type="checkbox" /></td>' +
@@ -127,10 +127,10 @@ jQuery(function($) {
             '</tr>');
   }
   
-  if(getCookie('class41101')==='41101')
+  if(getCookie('class411-01')==='411-01')
     {
     $('#worksheet-table').append('<tr>' +
-              '<td><input id="36101-select"type="checkbox" /></td>' +
+              '<td><input id="41101-select"type="checkbox" /></td>' +
               '<td>ITMD 411</td>' +
               '<td>Intermediate Software Development</td>' +
               '<th>01</th>' +
@@ -139,7 +139,7 @@ jQuery(function($) {
               '<td>James Papademas</td>' +
             '</tr>');
   }
-  
+/*  
   if(getCookie('class41102')==='41102')
     {
     $('#worksheet-table').append('<tr>' +
@@ -152,7 +152,7 @@ jQuery(function($) {
               '<td>Devin Roeder</td>' +
             '</tr>');
   }
-
+*/
   
  /* for (var i = 0; i <= courses3.length; i++) {
     if (courses3[i] === getCookie('36101')) {
@@ -168,6 +168,49 @@ jQuery(function($) {
     }
     
   }*/
+  console.log('cookie is !'+ getCookie('class36101'));
+  console.log('update!');
+  $('#drop-form').on('submit', function(e) {
+    e.preventDefault();
+    if($('#36101-select').is(':checked')) {
+      setCookie('class36101delete','empty',1);
+      console.log("cookie set is "+getCookie('class'));
+    }
+    if($('#36102-select').is(':checked')) {
+      setCookie('class36102','empty',1);
+    }
+    
+    console.log('cookie is now ... !'+ getCookie('class36101delete'));
+ //   window.location.replace('../../worksheet');
+    
+  })
+  console.log('cookie is now ... !'+ getCookie('class36101delete'));
+  if(getCookie('class36101delete')==='empty')
+  {
+    $('#worksheet-table').append('<tr>' +
+              '<td> leave </td>' +
+              '<td> </td>' +
+              '<td> </td>' +
+              '<th> </th>' +
+              '<td> </td>' +
+              '<td> </td>' +
+              '<td> </td>' +
+            '</tr>');
+  }
+  
+  if(getCookie('class36102')==='empty')
+    {
+    $('#worksheet-table').append('<tr>' +
+              '<td> </td>' +
+              '<td> </td>' +
+              '<td> </td>' +
+              '<th> </th>' +
+              '<td> </td>' +
+              '<td> </td>' +
+              '<td> </td>' +
+            '</tr>');
+  }
+  
   
   //----------END WORKSHEET-------------
     
