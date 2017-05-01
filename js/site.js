@@ -146,10 +146,10 @@ jQuery(function($) {
               '<td><input id="36101-select"type="checkbox" /></td>' +
               '<td>ITMD 411</td>' +
               '<td>Intermediate Software Development</td>' +
-              '<th>01</th>' +
+              '<th>02</th>' +
               '<td>TR</td>' +
-              '<td>11:25am-12:40pm</td>' +
-              '<td>James Papademas</td>' +
+              '<td>1:50pm-3:05pm</td>' +
+              '<td>Devin Roeder</td>' +
             '</tr>');
   }
 
